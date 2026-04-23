@@ -1,0 +1,148 @@
+{
+  "version": "1.0",
+  "project": "ClauseShield",
+  "language": "zh-CN",
+  "title": "独立开发者合同十大高频坑点",
+  "description": "面向独立开发者的外包合同风险Few-Shot示例库，用于训练AI扫描Agent识别风险条款",
+  "examples": [
+    {
+      "id": "ip_ownership",
+      "category": "IP归属",
+      "risk_level": "高危",
+      "keywords": ["知识产权", "著作权", "所有权", "Work for Hire", "归属", "转让", "assign", "transfer"],
+      "legal_jargon": "乙方确认，本合同项下开发成果的全部知识产权（包括但不限于著作权、专利权、商标权）自成果交付之日起即归甲方所有。",
+      "plain_risk": "【高危】这意味着你写的每一行代码，做完项目后就跟你没关系了。你不能再在自己的作品集展示，不能复用代码模块，甚至连署名权都可能被剥夺。很多公司用这条把你变成'代码代工厂'。",
+      "common_practice": "行业常规：知识产权可约定'项目交付后归甲方'，但应保留乙方署名权、开源组件归属权、以及乙方个人作品集展示权。",
+      "suggestion": "要求增加：保留署名权、开源代码归属原权利人、允许放入个人作品集"
+    },
+    {
+      "id": "unlimited_liability",
+      "category": "无限责任",
+      "risk_level": "高危",
+      "keywords": ["赔偿", "损失", "全额", "全部", "一切", "无上限", "无限", "indemnify", "hold harmless", "all damages"],
+      "legal_jargon": "如因乙方原因导致项目延期或质量缺陷，乙方应赔偿甲方因此遭受的全部直接及间接损失，包括但不限于预期收益损失、商誉损失。",
+      "plain_risk": "【高危】'全部损失'包括什么？甲方可以说因为延期损失了100万预期收益，让你赔。独立开发者个人资产（房子、存款）可能被一锅端。这叫'无限连带责任'。",
+      "common_practice": "行业常规：赔偿责任应设置上限（如合同金额的50%-100%），且排除间接损失、预期收益、商誉损失。",
+      "suggestion": "要求增加：赔偿上限不超过合同总金额，排除间接损失和预期利润"
+    },
+    {
+      "id": "payment_terms",
+      "category": "付款节点",
+      "risk_level": "高危",
+      "keywords": ["验收", "合格后", "满意后", "完成后", "通过后", "尾款", "里程碑", "milestone", "upon acceptance"],
+      "legal_jargon": "甲方应在项目整体验收合格后15个工作日内支付剩余款项。验收标准为甲方确认系统运行稳定、功能符合需求文档。",
+      "plain_risk": "【高危】什么叫'验收合格'？没有客观标准，甲方可以无限期说'还有小问题'拖着不验收，尾款永远拿不到。很多外包坑的核心就在这一条。",
+      "common_practice": "行业常规：应按里程碑付款（如30%首付+30%中期+40%交付），验收期不超过7天，逾期视为自动验收。",
+      "suggestion": "要求改为：按里程碑分期支付，验收期≤7天且逾期自动视为验收合格"
+    },
+    {
+      "id": "maintenance_scope",
+      "category": "维护范围",
+      "risk_level": "警告",
+      "keywords": ["维护", "bug修复", "终身", "永久", "质保", "免费维护", "保修", "support", "maintenance", "warranty"],
+      "legal_jargon": "乙方承诺对交付产品提供终身免费技术支持和Bug修复服务，包括但不限于因第三方依赖库更新导致的兼容性问题。",
+      "plain_risk": "【警告】'终身免费'意味着你接了一个项目，要伺候它一辈子。第三方库（如React、Node.js）随时更新，每次更新导致的问题都要你免费修？这会把你的时间锁死在一个老项目上。",
+      "common_practice": "行业常规：免费维护期3-12个月，明确排除第三方库更新导致的兼容性问题，超出范围按工时收费。",
+      "suggestion": "要求改为：免费维护期明确为X个月，排除第三方更新和甲方自行修改导致的问题"
+    },
+    {
+      "id": "non_compete",
+      "category": "竞业限制",
+      "risk_level": "高危",
+      "keywords": ["竞业", "竞争", "同类", "相似", "不得从事", "限制", "non-compete", "competing", "similar business"],
+      "legal_jargon": "合同终止后两年内，乙方不得从事与甲方业务相同或相似的软件开发业务，不得为甲方的竞争对手提供同类服务。",
+      "plain_risk": "【高危】你接了一个电商项目，两年内不能接任何电商相关项目？这直接封杀了你最大的收入来源。而且竞业限制在中国法律下通常要给补偿金（工资的30%），合同里往往只限制你不给补偿。",
+      "common_practice": "行业常规：竞业限制仅适用于接触核心商业秘密的场景，期限不超过6个月，且必须支付经济补偿。",
+      "suggestion": "要求删除或改为：不超过6个月、仅限核心商业秘密、必须支付补偿金"
+    },
+    {
+      "id": "confidentiality_period",
+      "category": "保密期限",
+      "risk_level": "警告",
+      "keywords": ["保密", "永久", "终身", "无限期", "confidential", "perpetual", "indefinite", "forever"],
+      "legal_jargon": "乙方应对本合同内容及项目相关信息承担永久保密义务，即使合同终止后仍持续有效。",
+      "plain_risk": "【警告】永久保密意味着你这辈子都不能提自己做过这个项目，连简历里都不能写。这对独立开发者的职业发展是致命打击——你无法展示项目经验。",
+      "common_practice": "行业常规：保密期限通常为1-3年，且应允许乙方在脱敏后用于作品集展示。",
+      "suggestion": "要求改为：保密期限不超过2年，允许匿名/脱敏后用于案例展示"
+    },
+    {
+      "id": "scope_creep",
+      "category": "需求蔓延",
+      "risk_level": "警告",
+      "keywords": ["调整", "优化", "完善", "补充", "变更", "新增", "额外", "reasonable", "modifications", "changes"],
+      "legal_jargon": "甲方有权根据业务发展需要，要求乙方对功能进行合理调整和优化，乙方应予以积极配合，不得无故拒绝。",
+      "plain_risk": "【警告】什么叫'合理'？没有边界。甲方可要求加10个新功能、改3版UI、支持新平台，都说这是'合理调整'。如果不额外收费，你的利润会被无限蚕食。",
+      "common_practice": "行业常规：超出原始需求文档的功能视为新增需求，需单独报价。变更需书面确认并附工期/费用调整。",
+      "suggestion": "要求增加：超出原始需求范围视为新增需求，需另行签署补充协议并付费"
+    },
+    {
+      "id": "penalty_late",
+      "category": "延期罚款",
+      "risk_level": "警告",
+      "keywords": ["违约金", "延期", "每日", "每天", "罚款", "滞纳金", "liquidated damages", "penalty", "per day"],
+      "legal_jargon": "如乙方未能按期交付，每逾期一日应向甲方支付合同总金额千分之五的违约金。",
+      "plain_risk": "【警告】算一下：10万合同，每天违约金500元，延期一个月就是1.5万，等于白干。而且甲方拖延验收、需求变更导致延期，往往不减免违约金。",
+      "common_practice": "行业常规：违约金不超过合同总金额的5%-10%，且因甲方原因（需求变更、验收拖延）导致的延期不计入违约。",
+      "suggestion": "要求改为：违约金上限不超过合同金额10%，甲方原因导致的延期免责"
+    },
+    {
+      "id": "exclusive",
+      "category": "排他性条款",
+      "risk_level": "提示",
+      "keywords": ["独家", "排他", "专属", "不得为其他", "exclusive", "sole", "only"],
+      "legal_jargon": "合作期间，乙方不得为其他第三方提供与本项目技术栈相同或相似的技术服务。",
+      "plain_risk": "【提示】如果你用React做这个项目，是不是所有React项目都不能接了？技术栈相同的服务很多，这种排他性过于宽泛，会严重限制你的接单能力。",
+      "common_practice": "行业常规：排他性仅限制为甲方的直接竞争对手提供相同产品/服务，不限定技术栈。",
+      "suggestion": "要求改为：仅限制为甲方直接竞争对手提供相同产品，不限技术栈"
+    },
+    {
+      "id": "source_code_delivery",
+      "category": "源码交付",
+      "risk_level": "提示",
+      "keywords": ["源代码", "源码", "原始代码", "source code", "deliverables"],
+      "legal_jargon": "乙方应在项目验收后向甲方交付全部源代码，包括所有配置文件、数据库脚本及部署文档。",
+      "plain_risk": "【提示】这看起来正常，但要注意：如果你复用了之前项目的通用模块（如自己写的工具库），这些核心资产也跟着交付了。等于你积累的技术资产被一次性买断。",
+      "common_practice": "行业常规：交付范围仅限于本项目专属代码，通用框架/工具库保留归属权，数据库结构可交付但数据本身不交付。",
+      "suggestion": "要求增加：通用模块/工具库归属乙方，仅交付项目专属代码"
+    }
+  ],
+  "scanning_rules": {
+    "agent_definitions": [
+      {
+        "agent_name": "IP归属扫描器",
+        "focus": ["知识产权", "著作权", "所有权", "Work for Hire", "转让", "assign"],
+        "output_fields": ["risk_level", "confidence", "description", "common_practice"]
+      },
+      {
+        "agent_name": "付款节点扫描器",
+        "focus": ["验收", "尾款", "里程碑", "通过后付款", "满意后"],
+        "output_fields": ["risk_level", "confidence", "description", "common_practice"]
+      },
+      {
+        "agent_name": "无限责任扫描器",
+        "focus": ["赔偿", "全部损失", "间接损失", "预期收益", "无限", "全额"],
+        "output_fields": ["risk_level", "confidence", "description", "common_practice"]
+      },
+      {
+        "agent_name": "维护范围扫描器",
+        "focus": ["终身", "永久", "免费维护", "质保", "保修", "第三方"],
+        "output_fields": ["risk_level", "confidence", "description", "common_practice"]
+      },
+      {
+        "agent_name": "保密期限扫描器",
+        "focus": ["永久", "终身", "无限期", "保密义务", "confidential", "perpetual"],
+        "output_fields": ["risk_level", "confidence", "description", "common_practice"]
+      },
+      {
+        "agent_name": "竞业限制扫描器",
+        "focus": ["竞业", "不得从事", "竞争对手", "同类", "non-compete", "competing"],
+        "output_fields": ["risk_level", "confidence", "description", "common_practice"]
+      }
+    ],
+    "confidence_scoring": {
+      "high_risk_threshold": 80,
+      "medium_risk_threshold": 60,
+      "low_risk_threshold": 0
+    }
+  }
+}

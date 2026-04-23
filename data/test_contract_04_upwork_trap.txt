@@ -1,0 +1,35 @@
+# 模拟合同4：Upwork风格英文合同陷阱
+
+Independent Contractor Agreement
+
+This Independent Contractor Agreement ("Agreement") is entered into between Client ("Company") and Contractor ("Developer").
+
+1. WORK FOR HIRE
+Contractor hereby assigns to Client all right, title, and interest in and to the Work Product, including all intellectual property rights therein. This assignment is deemed effective as of the moment of creation. Contractor waives all moral rights and agrees never to challenge Client's ownership.
+
+2. INDEMNIFICATION
+Contractor shall indemnify, defend, and hold harmless Client from and against any and all claims, losses, liabilities, damages, and expenses (including reasonable attorneys' fees) arising out of or relating to the Services provided under this Agreement, regardless of whether such claims are grounded in negligence, breach of contract, or strict liability.
+
+3. PAYMENT TERMS
+Payment of the final installment shall be due within thirty (30) days after Client's written acceptance of the Deliverables. Acceptance criteria shall be determined by Client in its sole discretion. Client reserves the right to withhold payment until all defects, in Client's sole judgment, have been corrected.
+
+4. NON-COMPETE
+During the term of this Agreement and for two (2) years thereafter, Contractor shall not directly or indirectly engage in any business that competes with Client's business within the same industry or geographic region. This restriction applies worldwide.
+
+5. CONFIDENTIALITY
+Contractor agrees to maintain the confidentiality of all proprietary information disclosed during the engagement perpetually, even after termination of this Agreement. This obligation survives termination of this Agreement indefinitely.
+
+6. WARRANTY
+Contractor warrants that the Deliverables shall be free from defects in materials and workmanship for the lifetime of the software and agrees to provide ongoing technical support and bug fixes at no additional charge, including compatibility updates required by third-party library updates.
+
+7. SCOPE OF WORK
+Client may request reasonable modifications to the Deliverables during the development process. Contractor shall make such modifications as necessary to ensure Client satisfaction with the final product. Contractor shall not unreasonably withhold consent to scope changes.
+
+8. LIQUIDATED DAMAGES
+In the event of late delivery, Contractor shall pay liquidated damages of 1% of the total contract value per day of delay, up to a maximum of 50% of the contract value. Client-caused delays are not grounds for extension unless approved in writing by Client's CEO.
+
+9. EXCLUSIVITY
+Contractor agrees to dedicate sufficient time and resources to Client's project and shall not accept other engagements that would impair Contractor's ability to perform the Services hereunder.
+
+10. SOURCE CODE
+Contractor shall deliver all source code, documentation, build scripts, and development environment configurations necessary for Client to maintain and modify the software independently.

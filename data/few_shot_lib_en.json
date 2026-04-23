@@ -1,0 +1,153 @@
+{
+  "version": "1.0",
+  "project": "ClauseShield",
+  "language": "en-US",
+  "title": "Top 10 High-Frequency Contract Traps for Indie Developers",
+  "description": "Few-Shot example library for freelance/contract developer agreements, targeting Upwork/Fiverr/common outsourcing platforms",
+  "examples": [
+    {
+      "id": "work_for_hire",
+      "category": "IP Ownership",
+      "risk_level": "高危",
+      "keywords": ["Work for Hire", "assign", "transfer", "all rights", "intellectual property", "ownership", "sole and exclusive"],
+      "legal_jargon": "Contractor hereby assigns to Client all right, title, and interest in and to the Work Product, including all intellectual property rights therein. This assignment is deemed effective as of the moment of creation.",
+      "plain_risk": "【高危】"Work for Hire" means you don't own anything you build. You can't reuse code, show it in your portfolio, or even claim authorship. Many clients slip this in to turn you into a code factory while paying freelancer rates.",
+      "common_practice": "Industry standard: You retain rights to reusable components/frameworks. Client gets ownership of project-specific deliverables only. You keep portfolio display rights.",
+      "suggestion": "Negotiate: Reserve rights to pre-existing code, open-source components, and portfolio display rights."
+    },
+    {
+      "id": "indemnification",
+      "category": "Unlimited Liability",
+      "risk_level": "高危",
+      "keywords": ["indemnify", "hold harmless", "defend", "all claims", "any and all", "losses", "liabilities", "damages"],
+      "legal_jargon": "Contractor shall indemnify, defend, and hold harmless Client from and against any and all claims, losses, liabilities, damages, and expenses arising out of or relating to the Services provided under this Agreement.",
+      "plain_risk": "【高危】"Any and all claims" means if the client gets sued because of your work, you pay for everything—including their legal fees. If they claim $500K in damages from a delayed launch, you could lose your house. This is an unlimited liability trap.",
+      "common_practice": "Industry standard: Liability cap at 100% of contract value. Exclude consequential damages, lost profits, and third-party claims. Mutual indemnification only for gross negligence.",
+      "suggestion": "Cap liability at contract value. Exclude indirect/consequential damages. Limit indemnification to your direct negligence."
+    },
+    {
+      "id": "payment_on_acceptance",
+      "category": "Payment Terms",
+      "risk_level": "高危",
+      "keywords": ["upon acceptance", "satisfactory completion", "sign-off", "approval", "milestone", "net 30", "net 15"],
+      "legal_jargon": "Payment of the final installment shall be due within thirty (30) days after Client's written acceptance of the Deliverables. Acceptance criteria shall be determined by Client in its sole discretion.",
+      "plain_risk": "【高危】"Sole discretion" = the client can endlessly say "it's not quite right yet" and never pay the final installment. This is the #1 reason freelancers never get paid. No objective standard = infinite delay.",
+      "common_practice": "Industry standard: Milestone-based payments (30/30/40). Acceptance period max 7 business days. Deemed accepted if no feedback within acceptance period.",
+      "suggestion": "Demand: Milestone payments with clear criteria. 7-day acceptance window. Auto-acceptance if client goes silent."
+    },
+    {
+      "id": "unlimited_revisions",
+      "category": "Scope Creep",
+      "risk_level": "警告",
+      "keywords": ["reasonable modifications", "changes", "revisions", "adjustments", "until satisfied", "unlimited", "as needed"],
+      "legal_jargon": "Client may request reasonable modifications to the Deliverables during the development process. Contractor shall make such modifications as necessary to ensure Client satisfaction with the final product.",
+      "plain_risk": "【警告】"Reasonable" and "satisfaction" are undefined. Client can demand 10 new features, 3 UI redesigns, and platform migrations—all "reasonable modifications." Without change-order pricing, your profit margin disappears.",
+      "common_practice": "Industry standard: Fixed number of revision rounds (2-3). Anything outside original SOW = change order with separate quote. Hourly rate for out-of-scope work.",
+      "suggestion": "Limit to 2 revision rounds. Require written change orders for scope changes. Bill out-of-scope at hourly rate."
+    },
+    {
+      "id": "perpetual_confidentiality",
+      "category": "Confidentiality Period",
+      "risk_level": "警告",
+      "keywords": ["perpetual", "indefinite", "forever", "permanently", "ongoing", "survive termination", "confidentiality"],
+      "legal_jargon": "Contractor agrees to maintain the confidentiality of all proprietary information disclosed during the engagement perpetually, even after termination of this Agreement.",
+      "plain_risk": "【警告】Perpetual = you can never mention you worked on this project. Ever. Not in your portfolio, not on LinkedIn, not in interviews. For an indie developer, invisible work experience is career poison.",
+      "common_practice": "Industry standard: 1-3 year confidentiality period. Allow anonymized/portfolio use after project completion. Public information excluded.",
+      "suggestion": "Limit to 1-2 years. Allow anonymized portfolio use. Exclude information already public."
+    },
+    {
+      "id": "non_compete_broad",
+      "category": "Non-Compete",
+      "risk_level": "高危",
+      "keywords": ["non-compete", "competing", "similar services", "same industry", "exclusive", "directly or indirectly", "engage in"],
+      "legal_jargon": "During the term of this Agreement and for two (2) years thereafter, Contractor shall not directly or indirectly engage in any business that competes with Client's business within the same industry or geographic region.",
+      "plain_risk": "【高危】You build one e-commerce site, now you can't work on ANY e-commerce project for 2 years? That's career suicide. Non-competes are often unenforceable without compensation, but clients still use them to intimidate freelancers.",
+      "common_practice": "Industry standard: Non-compete limited to direct competitors (named companies), max 6 months, and requires financial compensation (30%+ of average earnings).",
+      "suggestion": "Delete or: Limit to 6 months. Name specific competitors only. Require compensation."
+    },
+    {
+      "id": "warranty_lifetime",
+      "category": "Maintenance Scope",
+      "risk_level": "警告",
+      "keywords": ["lifetime", "perpetual", "warranty", "guarantee", "bug fix", "maintenance", "support", "forever"],
+      "legal_jargon": "Contractor warrants that the Deliverables shall be free from defects in materials and workmanship for the lifetime of the software and agrees to provide ongoing technical support and bug fixes at no additional charge.",
+      "plain_risk": "【警告】Lifetime warranty means you're on the hook forever. When React 19 breaks your React 17 code in 2026, you fix it for free. Third-party dependencies evolve constantly—this clause locks you into unpaid maintenance for years.",
+      "common_practice": "Industry standard: 30-90 day warranty for defects only. Maintenance/support is a separate paid retainer ($X/month). Third-party updates excluded.",
+      "suggestion": "Limit warranty to 30-90 days for original defects. Bill support/maintenance separately. Exclude third-party updates."
+    },
+    {
+      "id": "penalty_per_day",
+      "category": "Late Penalty",
+      "risk_level": "警告",
+      "keywords": ["liquidated damages", "penalty", "per day", "daily", "late fee", "delay", "breach"],
+      "legal_jargon": "In the event of late delivery, Contractor shall pay liquidated damages of 1% of the total contract value per day of delay, up to a maximum of 50% of the contract value.",
+      "plain_risk": "【警告】1% per day = 30% per month. On a $10K project, that's $3K/month in penalties. And clients often cause delays themselves (slow feedback, scope changes) while still charging you penalties.",
+      "common_practice": "Industry standard: 0.05%-0.1% per day. Max 5-10% of contract value. Client-caused delays exempt (slow feedback, scope changes, late payment).",
+      "suggestion": "Cap at 0.1% per day. Max 10% total. Exempt client-caused delays."
+    },
+    {
+      "id": "source_code_broad",
+      "category": "Source Code Delivery",
+      "risk_level": "提示",
+      "keywords": ["source code", "deliverables", "all code", "complete", "documentation", "注释", "注释"],
+      "legal_jargon": "Contractor shall deliver all source code, documentation, build scripts, and development environment configurations necessary for Client to maintain and modify the software independently.",
+      "plain_risk": "【提示】Seems fair, but watch out: if you reuse your personal utility libraries or boilerplate code, those go to the client too. Your accumulated technical assets get transferred for the price of one project.",
+      "common_practice": "Industry standard: Project-specific code only. Pre-existing frameworks/libraries remain Contractor's property. General documentation included; proprietary internal tools excluded.",
+      "suggestion": "Specify: Project-specific code only. Pre-existing libraries/frameworks excluded."
+    },
+    {
+      "id": "exclusivity_clause",
+      "category": "Exclusivity",
+      "risk_level": "提示",
+      "keywords": ["exclusive", "sole", "only provider", "no other clients", "dedicated", "full-time commitment"],
+      "legal_jargon": "Contractor agrees to dedicate sufficient time and resources to Client's project and shall not accept other engagements that would impair Contractor's ability to perform the Services hereunder.",
+      "plain_risk": "【提示】"Sufficient time" is vague, but some clients interpret this as full-time exclusivity. If you're juggling multiple clients (standard for freelancers), this could be used to force you to drop other work—or claim breach.",
+      "common_practice": "Industry standard: No exclusivity unless explicitly paid retainer. Contractor maintains right to serve other clients. Specific weekly hours committed (e.g., 20 hrs/week).",
+      "suggestion": "Clarify: No exclusivity. Specific hours/week committed. Right to serve other clients maintained."
+    }
+  ],
+  "platform_specific_notes": {
+    "upwork": "Upwork's default ToS favors the client. Always attach a separate Statement of Work (SOW) with your own terms. Upwork disputes rarely favor freelancers for fixed-price contracts.",
+    "fiverr": "Fiverr's 'Commercial Use' extra is often cheaper than losing IP rights. Gig descriptions can override custom contracts—read carefully.",
+    "direct_client": "Direct contracts carry highest risk because there's no platform mediation. Escrow services (e.g., SafePay) strongly recommended for fixed-price work."
+  },
+  "scanning_rules": {
+    "agent_definitions": [
+      {
+        "agent_name": "IP_Ownership_Scanner",
+        "focus": ["Work for Hire", "assign", "transfer", "all rights", "ownership"],
+        "output_fields": ["risk_level", "confidence", "description", "common_practice"]
+      },
+      {
+        "agent_name": "Payment_Terms_Scanner",
+        "focus": ["upon acceptance", "satisfactory", "approval", "milestone", "net 30"],
+        "output_fields": ["risk_level", "confidence", "description", "common_practice"]
+      },
+      {
+        "agent_name": "Liability_Scanner",
+        "focus": ["indemnify", "hold harmless", "all claims", "any and all", "damages"],
+        "output_fields": ["risk_level", "confidence", "description", "common_practice"]
+      },
+      {
+        "agent_name": "Maintenance_Scanner",
+        "focus": ["lifetime", "perpetual", "warranty", "bug fix", "maintenance", "support"],
+        "output_fields": ["risk_level", "confidence", "description", "common_practice"]
+      },
+      {
+        "agent_name": "Confidentiality_Scanner",
+        "focus": ["perpetual", "indefinite", "forever", "confidentiality", "survive termination"],
+        "output_fields": ["risk_level", "confidence", "description", "common_practice"]
+      },
+      {
+        "agent_name": "Non_Compete_Scanner",
+        "focus": ["non-compete", "competing", "similar", "same industry", "exclusive"],
+        "output_fields": ["risk_level", "confidence", "description", "common_practice"]
+      }
+    ],
+    "confidence_scoring": {
+      "high_risk_threshold": 80,
+      "medium_risk_threshold": 60,
+      "low_risk_threshold": 0
+    }
+  }
+}
