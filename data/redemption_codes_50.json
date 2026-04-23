@@ -1,0 +1,456 @@
+{
+  "generated_at": "2026-04-23T16:06:49.759191",
+  "total": 50,
+  "codes": [
+    {
+      "code": "CLAUS-IKOR-3CMX",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-5QDT-5PX9",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-BB1C-YUPI",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-5E5W-VT0A",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-20LJ-BH50",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-OZ0N-GZ2K",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-JJUC-KPPL",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-Y8AX-0S13",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-P2LA-6FAW",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-QPLZ-ZPS6",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-OXVI-TEG9",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-ZEOQ-6T18",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-L38S-DP34",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-QYJ0-J2MB",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-SZUY-JOAQ",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-VFT7-20H2",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-ROZU-MZ78",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-A2QH-AFSC",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-1YFU-888O",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-NDIL-ZK5E",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-ENYH-N09R",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-7KFE-7504",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-BZLV-1VHZ",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-YRI1-XXG6",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-E4KS-4TG4",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-5X7X-3607",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-PMW6-1B7O",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-GKCN-NIUX",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-OE42-ITVY",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-O2J1-X33R",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-8MHV-1316",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-VON6-ZQO0",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-3Q9F-ZYWX",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-D3WH-JWTA",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-63NA-GKR5",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-XZRE-9U8S",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-PZFM-ORDB",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-YERC-76KQ",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-A3I8-8EI1",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-WOXN-759I",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-YL7I-XD90",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-4EU9-NLHM",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-O7M9-8YJL",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-02KS-55O9",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-DE5C-H4MX",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-PCNG-PT6S",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-CN37-6Y0B",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-6U11-GG47",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-DGYH-ZPI0",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    },
+    {
+      "code": "CLAUS-LIRV-4XHI",
+      "max_uses": 1,
+      "used_count": 0,
+      "status": "unused",
+      "created_at": "2026-04-23T16:06:49.758745",
+      "expires_at": "2027-04-23T16:06:49.758764",
+      "used_by": []
+    }
+  ]
+}
