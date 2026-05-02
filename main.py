@@ -75,6 +75,15 @@ def render_sidebar():
             help="支持PDF格式，建议文件大小不超过10MB"
         )
 
+        # 或粘贴文本
+        st.markdown("### 📝 或粘贴合同文本")
+        text_input = st.text_area(
+            "直接粘贴合同内容（纯文本）",
+            height=150,
+            placeholder="如果PDF无法识别，可直接粘贴合同文字内容...",
+            help="支持直接粘贴文字内容，适合扫描件PDF或快速测试"
+        )
+
         # 免责声明
         st.markdown("---")
         st.markdown("### ⚠️ 免责声明")
@@ -96,7 +105,7 @@ def render_sidebar():
         else:
             st.info("🆓 首次扫描免费")
 
-        return uploaded_file, lang_code, disclaimer_accepted
+        return uploaded_file, text_input, lang_code, disclaimer_accepted
 
 
 def render_paywall():
@@ -170,12 +179,14 @@ def render_restricted_report(scan_result):
     st.caption("提示: 激活完整权限后可查看每项风险的白话解释、行业常规和建议关注点")
 
 
-def render_full_report(scan_result, uploaded_file):
+def render_full_report(scan_result, uploaded_file=None):
     """渲染完整报告（含详情和下载）"""
     generate_report(scan_result)
 
     # 导出按钮
     col1, col2 = st.columns(2)
+    # 文件名生成
+    filename = uploaded_file.name if uploaded_file else "contract_text"
     with col1:
         text_report = generate_text_report(scan_result, safe_mode=True)
         # 添加UTF-8 BOM确保Windows记事本正确识别中文
@@ -183,7 +194,7 @@ def render_full_report(scan_result, uploaded_file):
         st.download_button(
             label="📥 下载文本报告",
             data=bom_report,
-            file_name=f"ClauseShield_Report_{uploaded_file.name}.txt",
+            file_name=f"ClauseShield_Report_{filename}.txt",
             mime="text/plain; charset=utf-8"
         )
     with col2:
@@ -196,12 +207,12 @@ def render_full_report(scan_result, uploaded_file):
         st.download_button(
             label="📥 下载合规完整报告",
             data=bom_full,
-            file_name=f"ClauseShield_FullReport_{uploaded_file.name}.txt",
+            file_name=f"ClauseShield_FullReport_{filename}.txt",
             mime="text/plain; charset=utf-8"
         )
 
 
-def render_main_content(uploaded_file, lang_code: str, disclaimer_accepted: bool):
+def render_main_content(uploaded_file, text_input, lang_code: str, disclaimer_accepted: bool):
     """渲染主内容区"""
 
     st.title("🛡️ ClauseShield 合同风险扫描")
@@ -210,8 +221,12 @@ def render_main_content(uploaded_file, lang_code: str, disclaimer_accepted: bool
     # 合规声明
     st.info(config.COMPLIANCE_NOTICE)
 
-    # 文件处理
+    # 确定输入来源
+    contract_text = None
+    filename = None
+
     if uploaded_file is not None:
+        filename = uploaded_file.name
         if not disclaimer_accepted:
             st.warning("⚠️ 请先阅读并勾选侧边栏的免责声明")
             return
@@ -224,10 +239,9 @@ def render_main_content(uploaded_file, lang_code: str, disclaimer_accepted: bool
             )
 
         if not contract_text:
-            st.error("❌ 无法从PDF中提取文本，请检查文件是否为可读的文本PDF")
+            st.error("❌ 无法从PDF中提取文本，请检查文件是否为可读的文本PDF（扫描件不支持）")
+            st.info("💡 提示：如果是扫描件PDF，请在侧边栏直接粘贴合同文字内容")
             return
-
-        st.session_state.contract_text = contract_text
 
         # 显示文件信息
         col1, col2, col3 = st.columns(3)
@@ -237,6 +251,24 @@ def render_main_content(uploaded_file, lang_code: str, disclaimer_accepted: bool
             st.metric("文件大小", f"{len(uploaded_file.getvalue()) / 1024:.1f} KB")
         with col3:
             st.metric("文本长度", f"{len(contract_text)} 字符")
+
+    elif text_input and text_input.strip():
+        contract_text = text_input.strip()
+        filename = "粘贴文本"
+
+        if not disclaimer_accepted:
+            st.warning("⚠️ 请先阅读并勾选侧边栏的免责声明")
+            return
+
+        # 显示文本信息
+        col1, col2 = st.columns(2)
+        with col1:
+            st.metric("输入方式", "直接粘贴")
+        with col2:
+            st.metric("文本长度", f"{len(contract_text)} 字符")
+
+    if contract_text is not None:
+        st.session_state.contract_text = contract_text
 
         # 扫描按钮
         if st.button("🚀 开始扫描", type="primary", use_container_width=True):
@@ -268,7 +300,7 @@ def render_main_content(uploaded_file, lang_code: str, disclaimer_accepted: bool
                     scan_result = loop.run_until_complete(
                         scan_contract(
                             contract_text,
-                            filename=uploaded_file.name,
+                            filename=filename,
                             language=lang_code
                         )
                     )
@@ -311,10 +343,15 @@ def render_main_content(uploaded_file, lang_code: str, disclaimer_accepted: bool
         - **竞业限制扫描**：发现过度竞业限制条款
 
         ### 🚀 使用步骤
-        1. 在侧边栏上传PDF合同文件
+        1. 在侧边栏上传PDF合同文件，或粘贴合同文字内容
         2. 阅读并勾选免责声明
         3. 点击"开始扫描"按钮
         4. 查看分级风险报告
+
+        ### 💡 小贴士
+        - **文本PDF**：直接上传即可扫描
+        - **扫描件PDF**（图片型）：请在侧边栏粘贴合同文字内容
+        - **快速测试**：直接粘贴一段合同文字即可体验
 
         ### ⚠️ 重要提醒
         本工具**不提供法律建议**，扫描结果仅供参考。
@@ -341,8 +378,8 @@ def main():
     """主函数"""
     init_session_state()
 
-    uploaded_file, lang_code, disclaimer_accepted = render_sidebar()
-    render_main_content(uploaded_file, lang_code, disclaimer_accepted)
+    uploaded_file, text_input, lang_code, disclaimer_accepted = render_sidebar()
+    render_main_content(uploaded_file, text_input, lang_code, disclaimer_accepted)
     render_footer()
 
 
