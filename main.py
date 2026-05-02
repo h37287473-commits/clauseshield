@@ -53,7 +53,7 @@ def init_session_state():
 def render_sidebar():
     """渲染侧边栏"""
     with st.sidebar:
-        st.image("🛡️", width=50)
+        st.markdown("# 🛡️")
         st.title("ClauseShield")
         st.caption("v1.0.0 - 独立开发者合同风险扫描")
 
