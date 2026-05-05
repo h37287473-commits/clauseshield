@@ -19,7 +19,7 @@ PROJECT_ROOT = Path(__file__).parent
 # DeepSeek API 配置
 DEEPSEEK_API_KEY = os.getenv("DEEPSEEK_API_KEY", "")
 DEEPSEEK_BASE_URL = os.getenv("DEEPSEEK_BASE_URL", "https://api.deepseek.com/v1")
-DEFAULT_MODEL = os.getenv("DEFAULT_MODEL", "deepseek-chat")
+DEFAULT_MODEL = os.getenv("DEFAULT_MODEL", "deepseek-v4-flash")
 
 # 应用配置
 APP_NAME = "ClauseShield"
