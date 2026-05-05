@@ -64,10 +64,6 @@ async def scan_contract(contract_text: str, filename: str = "", language: str = 
     Returns:
         扫描报告
     """
-    import os
-    if os.getenv("CLAUSESHIELD_MOCK_SCAN", "") == "1":
-        return _mock_scan_report(contract_text, filename, language)
-    
     start_time = time.time()
     
     # 条款切分
@@ -144,53 +140,3 @@ async def scan_contract(contract_text: str, filename: str = "", language: str = 
     print(f"   低危风险: {len(low_risks)}个")
     
     return report
-
-
-def _mock_scan_report(contract_text: str, filename: str = "", language: str = "zh") -> ScanReport:
-    """生成演示用Mock扫描报告（仅用于截图）"""
-    from config import RiskItem, ScanReport
-    
-    mock_risks = [
-        RiskItem(
-            clause_text="项目完成后，所有源代码、文档及相关知识产权归甲方所有。",
-            risk_level="高危",
-            confidence=92,
-            category="IP归属",
-            description="该条款将项目所有知识产权完全转让给甲方，意味着您后续无法在自己的作品集、GitHub或未来项目中复用相关代码和技术方案。",
-            common_practice="行业常规通常约定'项目交付物归甲方所有，但通用框架/工具库仍归开发者'，或明确区分定制代码与通用组件的归属。",
-            suggestion="建议修改为'项目定制开发部分的知识产权归甲方，乙方保留通用框架、工具库及可复用组件的所有权'。"
-        ),
-        RiskItem(
-            clause_text="验收合格后30天内付款。验收标准由甲方单方面确定。",
-            risk_level="警告",
-            confidence=75,
-            category="付款节点",
-            description="付款条件中的'验收标准由甲方单方面确定'存在重大不确定性，甲方可能以主观标准无限期拖延验收，导致乙方无法按时收款。",
-            common_practice="合理的做法是双方共同确定验收标准并在合同中明确列出，或约定验收期限（如收到交付物后7个工作日内未提出异议视为验收通过）。",
-            suggestion="要求将验收标准具体化、可量化，并增加'甲方在约定期限内未提出书面异议视为验收合格'的保护条款。"
-        ),
-        RiskItem(
-            clause_text="乙方提供终身免费技术支持，响应时间为24小时内。",
-            risk_level="提示",
-            confidence=55,
-            category="维护范围",
-            description="终身免费技术支持对独立开发者而言负担过重，且24小时响应意味着您需要随时待命，严重限制接其他项目的能力。",
-            common_practice="通常约定明确的质保期（如3-12个月），质保期后按小时或包年收费；响应时间区分工作日与非工作日。",
-            suggestion="建议将'终身'改为'自交付之日起12个月内'，并明确区分Bug修复（免费）与新需求开发（另计费）。"
-        ),
-    ]
-    
-    high_risks = [r for r in mock_risks if r.confidence >= HIGH_RISK_THRESHOLD]
-    medium_risks = [r for r in mock_risks if MEDIUM_RISK_THRESHOLD <= r.confidence < HIGH_RISK_THRESHOLD]
-    low_risks = [r for r in mock_risks if r.confidence < MEDIUM_RISK_THRESHOLD]
-    
-    return ScanReport(
-        filename=filename or "demo_contract.txt",
-        total_clauses=7,
-        risk_items=mock_risks,
-        high_risks=high_risks,
-        medium_risks=medium_risks,
-        low_risks=low_risks,
-        scan_time=2.5,
-        language="zh"  # type: ignore
-    )
